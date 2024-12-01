@@ -1,0 +1,8 @@
+C:\Users\User\Documents\Visual Studio 2015\Projects\WebApplication6\TechFix_Host\bin\Debug\TechFix_Host.exe.config
+C:\Users\User\Documents\Visual Studio 2015\Projects\WebApplication6\TechFix_Host\bin\Debug\TechFix_Host.exe
+C:\Users\User\Documents\Visual Studio 2015\Projects\WebApplication6\TechFix_Host\bin\Debug\TechFix_Host.pdb
+C:\Users\User\Documents\Visual Studio 2015\Projects\WebApplication6\TechFix_Host\obj\Debug\TechFix_Host.csprojResolveAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2015\Projects\WebApplication6\TechFix_Host\obj\Debug\TechFix_Host.exe
+C:\Users\User\Documents\Visual Studio 2015\Projects\WebApplication6\TechFix_Host\obj\Debug\TechFix_Host.pdb
+C:\Users\User\Documents\Visual Studio 2015\Projects\WebApplication6\TechFix_Host\bin\Debug\HelloService.dll
+C:\Users\User\Documents\Visual Studio 2015\Projects\WebApplication6\TechFix_Host\bin\Debug\HelloService.pdb

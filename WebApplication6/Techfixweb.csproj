@@ -1,0 +1,598 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{89A57C40-0949-44BD-9777-30E4AA220A10}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebApplication6</RootNamespace>
+    <AssemblyName>WebApplication6</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>disabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.0.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.0.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.0.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.0.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.0.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.0.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="add_orders.aspx" />
+    <Content Include="Add_orders_supplier02.aspx" />
+    <Content Include="admin.aspx" />
+    <Content Include="Admindashboard.aspx" />
+    <Content Include="Adminlogin.aspx" />
+    <Content Include="Adminregister.aspx" />
+    <Content Include="Admin_add_product.aspx" />
+    <Content Include="App_Data\Database1.mdf" />
+    <Content Include="App_Data\Database1_log.ldf">
+      <DependentUpon>Database1.mdf</DependentUpon>
+    </Content>
+    <Content Include="casing.aspx" />
+    <Content Include="customerdashboard.aspx" />
+    <Content Include="customerorder.aspx" />
+    <Content Include="customerquotation.aspx" />
+    <Content Include="desktop.aspx" />
+    <Content Include="forgetpassword.aspx" />
+    <Content Include="gaming.aspx" />
+    <Content Include="images\back_4.jpg" />
+    <Content Include="images\desktop2.jpg" />
+    <Content Include="images\firstpage.png" />
+    <Content Include="images\gr1.jpg" />
+    <Content Include="images\keyboard1.jpg" />
+    <Content Include="images\laptop4.jpg" />
+    <Content Include="images\laptop7.png" />
+    <Content Include="images\laptop8.png" />
+    <Content Include="images\motherboard2.jpg" />
+    <Content Include="images\one.png" />
+    <Content Include="images\processor1.jpg" />
+    <Content Include="images\processor2.jpg" />
+    <Content Include="images\processor3.jpg" />
+    <Content Include="images\ram2.jpg" />
+    <Content Include="images\st1.jpg" />
+    <Content Include="images\two.png" />
+    <Content Include="laptops.aspx" />
+    <Content Include="addproducts.aspx" />
+    <Content Include="contact.aspx" />
+    <Content Include="css.css" />
+    <Content Include="monitors.aspx" />
+    <Content Include="orderlogin01.aspx" />
+    <Content Include="peripherals.aspx" />
+    <Content Include="processors.aspx" />
+    <Content Include="homepage.aspx" />
+    <Content Include="images\ac1.jpg" />
+    <Content Include="images\ac2.jpg" />
+    <Content Include="images\ac3.jpg" />
+    <Content Include="images\ac4.jpg" />
+    <Content Include="images\adapter1.jpg" />
+    <Content Include="images\arrow.png" />
+    <Content Include="images\background.png" />
+    <Content Include="images\c1.png" />
+    <Content Include="images\c2.png" />
+    <Content Include="images\c3.png" />
+    <Content Include="images\c4.png" />
+    <Content Include="images\cartridge1.jpg" />
+    <Content Include="images\casing1.jpg" />
+    <Content Include="images\desktop1.jpg" />
+    <Content Include="images\drawingtable1.jpg" />
+    <Content Include="images\dslr camera.png" />
+    <Content Include="images\fridge1.png" />
+    <Content Include="images\gamepad1.jpg" />
+    <Content Include="images\h1.png" />
+    <Content Include="images\hardware1.jpg" />
+    <Content Include="images\hardware2.jpg" />
+    <Content Include="images\hardware3.jpg" />
+    <Content Include="images\hardware4.jpg" />
+    <Content Include="images\hardware5.jpg" />
+    <Content Include="images\hardware6.jpg" />
+    <Content Include="images\hardware7.jpg" />
+    <Content Include="images\hardware8.jpg" />
+    <Content Include="images\headphone1.jpg" />
+    <Content Include="images\homepic.png" />
+    <Content Include="images\image1.png" />
+    <Content Include="images\iphone 13 pro.png" />
+    <Content Include="images\laptop1.jpg" />
+    <Content Include="images\laptop2.jpg" />
+    <Content Include="images\laptop2.png" />
+    <Content Include="images\laptop3.jpg" />
+    <Content Include="images\left-arrow.png" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\menu.png" />
+    <Content Include="images\monitor1.jpg" />
+    <Content Include="images\motherboard1.jpg" />
+    <Content Include="images\mouse1.jpg" />
+    <Content Include="images\ot1.png" />
+    <Content Include="images\ot2.jpg" />
+    <Content Include="images\ot3.jpg" />
+    <Content Include="images\ot4.jpg" />
+    <Content Include="images\p6.png" />
+    <Content Include="images\pcm1.png" />
+    <Content Include="images\pe1.jpg" />
+    <Content Include="images\pe2.jpg" />
+    <Content Include="images\pe3.jpg" />
+    <Content Include="images\pe4.jpg" />
+    <Content Include="images\pe5.jpg" />
+    <Content Include="images\pe6.jpg" />
+    <Content Include="images\pe7.jpg" />
+    <Content Include="images\pe8.jpg" />
+    <Content Include="images\phone1.png" />
+    <Content Include="images\phone2.png" />
+    <Content Include="images\powerbank1.jpg" />
+    <Content Include="images\pr1.png" />
+    <Content Include="images\pr10.png" />
+    <Content Include="images\pr11.png" />
+    <Content Include="images\pr12.png" />
+    <Content Include="images\pr2.png" />
+    <Content Include="images\pr3.png" />
+    <Content Include="images\pr4.png" />
+    <Content Include="images\pr5.png" />
+    <Content Include="images\pr6.png" />
+    <Content Include="images\pr7.png" />
+    <Content Include="images\pr8.png" />
+    <Content Include="images\pr9.png" />
+    <Content Include="images\printer1.jpg" />
+    <Content Include="images\projecter1.jpg" />
+    <Content Include="images\ram1.jpg" />
+    <Content Include="images\register.png" />
+    <Content Include="images\restaurant.jpg" />
+    <Content Include="images\restaurant2.jpg" />
+    <Content Include="images\right-arrow.png" />
+    <Content Include="images\scaner1.jpg" />
+    <Content Include="images\software1.jpg" />
+    <Content Include="images\software2.jpg" />
+    <Content Include="images\software3.jpg" />
+    <Content Include="images\software4.jpg" />
+    <Content Include="images\t1.png" />
+    <Content Include="images\ups1.jpg" />
+    <Content Include="images\user .png" />
+    <Content Include="images\w1.png" />
+    <Content Include="Customerlogin.aspx" />
+    <Content Include="motherboards.aspx" />
+    <Content Include="packages.config" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="memory.aspx" />
+    <Content Include="Customerregister.aspx" />
+    <Content Include="Add_orders_supplier01.aspx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="RepairRequestform.aspx" />
+    <Content Include="Reparing.aspx" />
+    <Content Include="scripts\ai.0.22.9-build00167.js" />
+    <Content Include="scripts\ai.0.22.9-build00167.min.js" />
+    <Content Include="graphiccards.aspx" />
+    <Content Include="storagedevices.aspx" />
+    <Content Include="supplier01_view_orders.aspx" />
+    <Content Include="supplier2_view_orders.aspx" />
+    <Content Include="supplierdashboard.aspx" />
+    <Content Include="Supplierlogin.aspx" />
+    <Content Include="Supplierregister.aspx" />
+    <Content Include="viewinventory.aspx" />
+    <Content Include="viewmassages.aspx" />
+    <Content Include="vieworders.aspx" />
+    <Content Include="viewquotation.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="add_orders.aspx.cs">
+      <DependentUpon>add_orders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="add_orders.aspx.designer.cs">
+      <DependentUpon>add_orders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Add_orders_supplier02.aspx.cs">
+      <DependentUpon>Add_orders_supplier02.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Add_orders_supplier02.aspx.designer.cs">
+      <DependentUpon>Add_orders_supplier02.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin.aspx.cs">
+      <DependentUpon>admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin.aspx.designer.cs">
+      <DependentUpon>admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admindashboard.aspx.cs">
+      <DependentUpon>Admindashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admindashboard.aspx.designer.cs">
+      <DependentUpon>Admindashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Adminlogin.aspx.cs">
+      <DependentUpon>Adminlogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Adminlogin.aspx.designer.cs">
+      <DependentUpon>Adminlogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Adminregister.aspx.cs">
+      <DependentUpon>Adminregister.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Adminregister.aspx.designer.cs">
+      <DependentUpon>Adminregister.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_add_product.aspx.cs">
+      <DependentUpon>Admin_add_product.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_add_product.aspx.designer.cs">
+      <DependentUpon>Admin_add_product.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="casing.aspx.cs">
+      <DependentUpon>casing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="casing.aspx.designer.cs">
+      <DependentUpon>casing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="customerdashboard.aspx.cs">
+      <DependentUpon>customerdashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="customerdashboard.aspx.designer.cs">
+      <DependentUpon>customerdashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="customerorder.aspx.cs">
+      <DependentUpon>customerorder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="customerorder.aspx.designer.cs">
+      <DependentUpon>customerorder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="customerquotation.aspx.cs">
+      <DependentUpon>customerquotation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="customerquotation.aspx.designer.cs">
+      <DependentUpon>customerquotation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="desktop.aspx.cs">
+      <DependentUpon>desktop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="desktop.aspx.designer.cs">
+      <DependentUpon>desktop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="forgetpassword.aspx.cs">
+      <DependentUpon>forgetpassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="forgetpassword.aspx.designer.cs">
+      <DependentUpon>forgetpassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="gaming.aspx.cs">
+      <DependentUpon>gaming.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gaming.aspx.designer.cs">
+      <DependentUpon>gaming.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="laptops.aspx.cs">
+      <DependentUpon>laptops.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="laptops.aspx.designer.cs">
+      <DependentUpon>laptops.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="addproducts.aspx.cs">
+      <DependentUpon>addproducts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="addproducts.aspx.designer.cs">
+      <DependentUpon>addproducts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="contact.aspx.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="contact.aspx.designer.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="monitors.aspx.cs">
+      <DependentUpon>monitors.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="monitors.aspx.designer.cs">
+      <DependentUpon>monitors.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="orderlogin01.aspx.cs">
+      <DependentUpon>orderlogin01.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="orderlogin01.aspx.designer.cs">
+      <DependentUpon>orderlogin01.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="peripherals.aspx.cs">
+      <DependentUpon>peripherals.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="peripherals.aspx.designer.cs">
+      <DependentUpon>peripherals.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="processors.aspx.cs">
+      <DependentUpon>processors.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="processors.aspx.designer.cs">
+      <DependentUpon>processors.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="homepage.aspx.cs">
+      <DependentUpon>homepage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="homepage.aspx.designer.cs">
+      <DependentUpon>homepage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customerlogin.aspx.cs">
+      <DependentUpon>Customerlogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customerlogin.aspx.designer.cs">
+      <DependentUpon>Customerlogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="motherboards.aspx.cs">
+      <DependentUpon>motherboards.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="motherboards.aspx.designer.cs">
+      <DependentUpon>motherboards.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="memory.aspx.cs">
+      <DependentUpon>memory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="memory.aspx.designer.cs">
+      <DependentUpon>memory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Customerregister.aspx.cs">
+      <DependentUpon>Customerregister.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customerregister.aspx.designer.cs">
+      <DependentUpon>Customerregister.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="graphiccards.aspx.cs">
+      <DependentUpon>graphiccards.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="graphiccards.aspx.designer.cs">
+      <DependentUpon>graphiccards.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="RepairRequestform.aspx.cs">
+      <DependentUpon>RepairRequestform.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RepairRequestform.aspx.designer.cs">
+      <DependentUpon>RepairRequestform.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reparing.aspx.cs">
+      <DependentUpon>Reparing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reparing.aspx.designer.cs">
+      <DependentUpon>Reparing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="storagedevices.aspx.cs">
+      <DependentUpon>storagedevices.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="storagedevices.aspx.designer.cs">
+      <DependentUpon>storagedevices.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="supplier01_view_orders.aspx.cs">
+      <DependentUpon>supplier01_view_orders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="supplier01_view_orders.aspx.designer.cs">
+      <DependentUpon>supplier01_view_orders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="supplier2_view_orders.aspx.cs">
+      <DependentUpon>supplier2_view_orders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="supplier2_view_orders.aspx.designer.cs">
+      <DependentUpon>supplier2_view_orders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="supplierdashboard.aspx.cs">
+      <DependentUpon>supplierdashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="supplierdashboard.aspx.designer.cs">
+      <DependentUpon>supplierdashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Supplierlogin.aspx.cs">
+      <DependentUpon>Supplierlogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Supplierlogin.aspx.designer.cs">
+      <DependentUpon>Supplierlogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Supplierregister.aspx.cs">
+      <DependentUpon>Supplierregister.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Supplierregister.aspx.designer.cs">
+      <DependentUpon>Supplierregister.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SupplierService\SupplierServiceSoapClient.cs" />
+    <Compile Include="viewinventory.aspx.cs">
+      <DependentUpon>viewinventory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="viewinventory.aspx.designer.cs">
+      <DependentUpon>viewinventory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="viewmassages.aspx.cs">
+      <DependentUpon>viewmassages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="viewmassages.aspx.designer.cs">
+      <DependentUpon>viewmassages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vieworders.aspx.cs">
+      <DependentUpon>vieworders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vieworders.aspx.designer.cs">
+      <DependentUpon>vieworders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="viewquotation.aspx.cs">
+      <DependentUpon>viewquotation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="viewquotation.aspx.designer.cs">
+      <DependentUpon>viewquotation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Add_orders_supplier01.aspx.cs">
+      <DependentUpon>Add_orders_supplier01.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Add_orders_supplier01.aspx.designer.cs">
+      <DependentUpon>Add_orders_supplier01.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>7003</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:7003/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
